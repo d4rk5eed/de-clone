@@ -1,16 +1,20 @@
 APP="de_clone"
 
-BUILD_HOST="localhost"
-BUILD_USER="yz"
+BUILD_HOST="52.213.200.150"
+BUILD_USER="ec2-user"
 BUILD_AT="/tmp/edeliver/myapp/builds"
 
-STAGING_HOSTS="stage.myapp.com"
-STAGING_USER="web"
-DELIVER_TO="/home/web"
+STAGING_HOSTS="52.213.200.150"
+STAGING_USER="ec2-user"
+DELIVER_TO="/home/ec2-user/web"
+
+PRODUCTION_HOSTS="52.213.200.150"
+PRODUCTION_USER="ec2-user"
+DELIVER_TO="/home/ec2-user/web"
 
 # For *Phoenix* projects, symlink prod.secret.exs to our tmp source
 pre_erlang_get_and_update_deps() {
-  local _prod_secret_path="/home/yz/Workspace/de_clone/config/prod.secret.exs"
+  local _prod_secret_path="/home/ec2-user/build/config/prod.secret.exs"
   if [ "$TARGET_MIX_ENV" = "prod" ]; then
     __sync_remote "
       ln -sfn '$_prod_secret_path' '$BUILD_AT/config/prod.secret.exs'
