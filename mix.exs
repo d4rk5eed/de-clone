@@ -19,7 +19,7 @@ defmodule DeClone.Mixfile do
   def application do
     [mod: {DeClone, []},
      applications: [:phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger, :gettext,
-                    :phoenix_ecto, :postgrex, :edeliver]]
+                    :phoenix_ecto, :postgrex, :edeliver, :hexate]]
   end
 
   # Specifies which paths to compile per environment.
