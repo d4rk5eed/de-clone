@@ -19,4 +19,4 @@ config :de_clone, DeClone.Repo,
   pool: Ecto.Adapters.SQL.Sandbox
 
 config :de_clone, DeClone.PageRepo,
-  source: "test/priv/pages/pages.txt"
+  source: "pages/test_pages.txt"

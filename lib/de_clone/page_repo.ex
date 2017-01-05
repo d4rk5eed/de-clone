@@ -3,7 +3,8 @@ defmodule DeClone.PageRepo do
   alias DeClone.Page
 
   def all() do
-    filepath = Application.get_env(:de_clone, DeClone.PageRepo)[:source]
+    filepath = Path.join("#{:code.priv_dir(:de_clone)}",
+      Application.get_env(:de_clone, DeClone.PageRepo)[:source])
     stream = File.stream!(filepath)
     Enum.map(
       Stream.with_index(stream, 16),

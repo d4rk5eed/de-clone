@@ -10,7 +10,7 @@ config :de_clone,
   ecto_repos: []
 
 config :de_clone, DeClone.PageRepo,
-  source: "priv/pages/pages.txt"
+  source: "pages/pages.txt"
 
 # Configures the endpoint
 config :de_clone, DeClone.Endpoint,
