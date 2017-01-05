@@ -7,7 +7,7 @@ use Mix.Config
 
 # General application configuration
 config :de_clone,
-  ecto_repos: [DeClone.Repo]
+  ecto_repos: []
 
 # Configures the endpoint
 config :de_clone, DeClone.Endpoint,

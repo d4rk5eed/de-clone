@@ -17,20 +17,20 @@ defmodule DeClone.ModelCase do
   using do
     quote do
       alias DeClone.Repo
-
-      import Ecto
-      import Ecto.Changeset
-      import Ecto.Query
+      #
+      # import Ecto
+      # import Ecto.Changeset
+      # import Ecto.Query
       import DeClone.ModelCase
     end
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(DeClone.Repo)
-
-    unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(DeClone.Repo, {:shared, self()})
-    end
+    # :ok = Ecto.Adapters.SQL.Sandbox.checkout(DeClone.Repo)
+    #
+    # unless tags[:async] do
+    #   Ecto.Adapters.SQL.Sandbox.mode(DeClone.Repo, {:shared, self()})
+    # end
 
     :ok
   end

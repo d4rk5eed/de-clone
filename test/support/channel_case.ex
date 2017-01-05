@@ -21,9 +21,9 @@ defmodule DeClone.ChannelCase do
       use Phoenix.ChannelTest
 
       alias DeClone.Repo
-      import Ecto
-      import Ecto.Changeset
-      import Ecto.Query
+      # import Ecto
+      # import Ecto.Changeset
+      # import Ecto.Query
 
 
       # The default endpoint for testing
@@ -32,12 +32,12 @@ defmodule DeClone.ChannelCase do
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(DeClone.Repo)
-
-    unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(DeClone.Repo, {:shared, self()})
-    end
-
+    # :ok = Ecto.Adapters.SQL.Sandbox.checkout(DeClone.Repo)
+    #
+    # unless tags[:async] do
+    #   Ecto.Adapters.SQL.Sandbox.mode(DeClone.Repo, {:shared, self()})
+    # end
+    #
     :ok
   end
 end
