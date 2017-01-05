@@ -9,6 +9,9 @@ use Mix.Config
 config :de_clone,
   ecto_repos: []
 
+config :de_clone, DeClone.PageRepo,
+  source: "priv/pages/pages.txt"
+
 # Configures the endpoint
 config :de_clone, DeClone.Endpoint,
   url: [host: "localhost"],

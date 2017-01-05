@@ -17,3 +17,6 @@ config :de_clone, DeClone.Repo,
   database: "de_clone_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox
+
+config :de_clone, DeClone.PageRepo,
+  source: "test/priv/pages/pages.txt"
