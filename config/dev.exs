@@ -35,9 +35,5 @@ config :phoenix, :stacktrace_depth, 20
 
 # Configure your database
 config :de_clone, DeClone.Repo,
-  adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
-  database: "de_clone_dev",
-  hostname: "localhost",
-  pool_size: 10
+  adapter: Sqlite.Ecto,
+  database: "de_clone_dev.sqlite3"

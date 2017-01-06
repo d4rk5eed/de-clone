@@ -11,11 +11,8 @@ config :logger, level: :warn
 
 # Configure your database
 config :de_clone, DeClone.Repo,
-  adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
-  database: "de_clone_test",
-  hostname: "localhost",
+  adapter: Sqlite.Ecto,
+  database: "de_clone_test.sqlite3",
   pool: Ecto.Adapters.SQL.Sandbox
 
 config :de_clone, DeClone.PageRepo,
