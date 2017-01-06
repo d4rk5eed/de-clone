@@ -1,9 +1,9 @@
 /* This file is for your main application css. */
 .btn-lg {
-  font-size: 24px;
+  font-size: 2em;
 }
 
 .jumbotron p {
-  font-size: 32px;
-  font-family: 'Curier New', monospace;
+  font-size: 2em;
+  font-family: 'Arial', sans-serif;
 }
