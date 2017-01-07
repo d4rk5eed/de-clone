@@ -13,6 +13,7 @@ defmodule DeClone do
       #@NOTE Uncomment if sqlite be enabled
       # supervisor(DeClone.Repo, []),
       # Start the endpoint when the application starts
+      supervisor(DeClone.Cache, []),
       supervisor(DeClone.Endpoint, []),
       # Start your own worker by calling: DeClone.Worker.start_link(arg1, arg2, arg3)
       # worker(DeClone.Worker, [arg1, arg2, arg3]),
