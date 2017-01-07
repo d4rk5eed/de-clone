@@ -14,6 +14,10 @@ defmodule DeClone.Cache do
     end
   end
 
+  def get_random_id() do
+    GenServer.call(:de_cache, {:get_random_id})
+  end
+
   # defp set(slug, value) do
   #   GenServer.call(:de_cache, {:set, slug, value})
   # end
@@ -22,6 +26,10 @@ defmodule DeClone.Cache do
 
   def handle_call({:get, slug}, _from, state) do
     {:reply, {slug, Map.get(state, slug)} , state}
+  end
+
+  def handle_call({:get_random_id}, _from, state) do
+    {:reply, elem(Enum.random(state), 0) , state}
   end
 
   # def handle_call({:set, slug, value}, _from, state) do
