@@ -33,11 +33,12 @@ defmodule DeClone.ConnCase do
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(DeClone.Repo)
-
-    unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(DeClone.Repo, {:shared, self()})
-    end
+    #@NOTE Uncomment if sqlite be enabled
+    # :ok = Ecto.Adapters.SQL.Sandbox.checkout(DeClone.Repo)
+    #
+    # unless tags[:async] do
+    #   Ecto.Adapters.SQL.Sandbox.mode(DeClone.Repo, {:shared, self()})
+    # end
 
     {:ok, conn: Phoenix.ConnTest.build_conn()}
   end

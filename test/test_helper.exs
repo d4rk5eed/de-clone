@@ -1,4 +1,3 @@
 ExUnit.start
-
-Ecto.Adapters.SQL.Sandbox.mode(DeClone.Repo, :manual)
-
+#@NOTE Uncomment if sqlite be enabled
+#Ecto.Adapters.SQL.Sandbox.mode(DeClone.Repo, :manual)

@@ -9,6 +9,8 @@ defmodule DeClone do
     # Define workers and child supervisors to be supervised
     children = [
       # Start the Ecto repository
+
+      #@NOTE Uncomment if sqlite be enabled
       # supervisor(DeClone.Repo, []),
       # Start the endpoint when the application starts
       supervisor(DeClone.Endpoint, []),

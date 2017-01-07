@@ -32,12 +32,12 @@ defmodule DeClone.ChannelCase do
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(DeClone.Repo)
-
-    unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(DeClone.Repo, {:shared, self()})
-    end
-
+    # :ok = Ecto.Adapters.SQL.Sandbox.checkout(DeClone.Repo)
+    #
+    # unless tags[:async] do
+    #   Ecto.Adapters.SQL.Sandbox.mode(DeClone.Repo, {:shared, self()})
+    # end
+    #
     :ok
   end
 end

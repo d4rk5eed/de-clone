@@ -1,0 +1,6 @@
+<div class="jumbotron">
+  <p class="lead"><%= @page.body %></p>
+</div>
+<div class="text-center">
+  <a href="<%= page_path(@conn, :index) %>"><button type="button" class="center btn btn-primary btn-lg">ещё</button></a>
+</div>
