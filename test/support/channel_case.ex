@@ -21,9 +21,9 @@ defmodule DeClone.ChannelCase do
       use Phoenix.ChannelTest
 
       alias DeClone.Repo
-      # import Ecto
-      # import Ecto.Changeset
-      # import Ecto.Query
+      import Ecto
+      import Ecto.Changeset
+      import Ecto.Query
 
 
       # The default endpoint for testing
