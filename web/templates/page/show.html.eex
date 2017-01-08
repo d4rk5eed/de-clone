@@ -2,5 +2,5 @@
   <p class="lead"><%= @page.body %></p>
 </div>
 <div class="text-center">
-  <a href="<%= page_path(@conn, :index) %>"><button type="button" class="center btn btn-primary btn-lg">ещё</button></a>
+  <a href="<%= page_path(@conn, :show, @random_id) %>"><button type="button" class="center btn btn-primary btn-lg">ещё</button></a>
 </div>

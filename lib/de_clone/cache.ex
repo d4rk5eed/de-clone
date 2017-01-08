@@ -46,7 +46,7 @@ defmodule DeClone.Cache do
     # IO.inspect state
 
     state = Enum.reduce PageRepo.all(), %{}, fn(p, acc) ->
-      Map.put(acc, p.id, p.body)
+      Map.put(acc, p.id, p)
     end
     {:ok, state}
   end
